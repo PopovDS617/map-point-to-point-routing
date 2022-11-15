@@ -1,0 +1,13 @@
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.App {
+  height: 600px;
+  width: 100vh;
+}
+.map {
+  height: 100%;
+  width: 100%;
+}
