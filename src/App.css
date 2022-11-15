@@ -7,7 +7,22 @@ body {
   height: 600px;
   width: 100vh;
 }
-.map {
+#map {
   height: 100%;
   width: 100%;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+  background-color: green;
+}
+
+.marker {
+  background-image: url('../public/output-onlinepngtools\ \(2\).png');
+  background-size: cover;
+  width: 26px;
+  height: 22px;
+  background-color: black;
+  border-radius: 11px;
+  border: solid 1px darkslategray;
 }
