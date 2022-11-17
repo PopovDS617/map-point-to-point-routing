@@ -1,4 +1,4 @@
-const convertToPoints = (lngLat) => {
+export const convertToPoints = (lngLat) => {
     return {
       point: {
         latitude: lngLat.lat,
@@ -8,7 +8,7 @@ const convertToPoints = (lngLat) => {
   }
 
 
-   const sortDestinations = (locations) => {
+   export const sortDestinations = (locations) => {
       const pointsForDestinations = locations.map((destination) => {
         return convertToPoints(destination)
       })
