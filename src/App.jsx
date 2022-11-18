@@ -58,10 +58,7 @@ function App() {
     let map = tt.map({
       key: process.env.REACT_APP_TOMTOM_API_KEY,
       container: mapElement.current,
-      stylesVisibility: {
-        trafficIncidents: true,
-        trafficFlow: true,
-      },
+     
       center: [longitude, latitude],
       zoom: 14,
     });
