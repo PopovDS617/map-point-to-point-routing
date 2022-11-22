@@ -154,7 +154,9 @@ function App() {
         <div className="App">
         <div className="search-bar">
             <div className='title'>click on the map to add a marker</div>
-            <input
+       <div className='input-container'>  
+       <p>or change the starting location</p>
+       <input
               type="number"
               placeholder="longitude"
               id="longitude"
@@ -165,7 +167,9 @@ function App() {
               placeholder="latitude"
               id="latitude"
               onChange={(e) => setLatitude(e.target.value)}
-            />
+            /></div>
+       
+          
           </div>
           <div id="map" ref={mapElement} />
          
