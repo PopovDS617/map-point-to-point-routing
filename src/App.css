@@ -11,6 +11,16 @@ body {
   height: 80vh;
   width: 90vw;
 }
+
+.title{
+  margin-top:1rem;
+  margin-bottom:1rem;
+  font-size:2rem;}
+
+
+
+
+  
 #map {
   border-radius:25px;
   height: 100%;
