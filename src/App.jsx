@@ -152,8 +152,7 @@ function App() {
     <>
       {map && (
         <div className="App">
-          <div id="map" ref={mapElement} />
-          <div className="search-bar">
+        <div className="search-bar">
             <h3>set your coordinates</h3>
             <input
               type="number"
@@ -168,6 +167,8 @@ function App() {
               onChange={(e) => setLatitude(e.target.value)}
             />
           </div>
+          <div id="map" ref={mapElement} />
+         
         </div>
       )}
     </>
