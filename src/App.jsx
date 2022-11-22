@@ -156,6 +156,7 @@ function App() {
             <div className='title'>click on the map to add a marker</div>
        <div className='input-container'>  
        <p>or change the starting point</p>
+       <form > 
        <input
               type="number"
               placeholder="longitude"
@@ -167,7 +168,12 @@ function App() {
               placeholder="latitude"
               id="latitude"
               onChange={(e) => setLatitude(e.target.value)}
-            /></div>
+            />
+<button type='button'>change</button>
+</form>
+
+
+</div>
        
           
           </div>
