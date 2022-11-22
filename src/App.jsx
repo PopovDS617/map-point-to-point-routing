@@ -7,8 +7,11 @@ import './App.css';
 function App() {
   const mapElement = useRef();
   const [map, setMap] = useState({});
+
   const [longitude, setLongitude] = useState(39.72506498241886);
   const [latitude, setLatitude] = useState(47.22738590634815);
+  const longitudeInputRef = useRef(null);
+  const latitudeInputRef = useRef(null);
 
   const convertToPoints = (lngLat) => {
     return {
@@ -58,9 +61,9 @@ function App() {
     let map = tt.map({
       key: process.env.REACT_APP_TOMTOM_API_KEY,
       container: mapElement.current,
-     
+
       center: [longitude, latitude],
-      zoom: 14,
+      zoom: 12,
     });
     setMap(map);
 
@@ -148,37 +151,44 @@ function App() {
     return () => map.remove();
   }, [longitude, latitude]);
 
+  const setCoordinates = (e) => {
+    e.preventDefault();
+
+    const latitude = parseInt(latitudeInputRef.current.value);
+    const longitude = parseInt(longitudeInputRef.current.value);
+
+    setLatitude(latitude);
+    setLongitude(longitude);
+  };
+
   return (
     <>
       {map && (
         <div className="App">
-        <div className="search-bar">
-            <div className='title'>click on the map to add a marker</div>
-       <div className='input-container'>  
-       <p>or change the starting point</p>
-       <form > 
-       <input
-              type="number"
-              placeholder="longitude"
-              id="longitude"
-              onChange={(e) => setLongitude(e.target.value)}
-            />
-            <input
-              type="number"
-              placeholder="latitude"
-              id="latitude"
-              onChange={(e) => setLatitude(e.target.value)}
-            />
-<button type='button'>change</button>
-</form>
-
-
-</div>
-       
-          
+          <div className="search-bar">
+            <div className="title">click on the map to add a marker</div>
+            <div className="input-container">
+              <p>or change the starting point</p>
+              <form onSubmit={setCoordinates}>
+                <input
+                  type="number"
+                  ref={latitudeInputRef}
+                  placeholder="latitude"
+                  id="latitude"
+                  step={0.1}
+                />
+                <input
+                  ref={longitudeInputRef}
+                  type="number"
+                  placeholder="longitude"
+                  id="longitude"
+                  step={0.1}
+                />
+                <button>change</button>
+              </form>
+            </div>
           </div>
           <div id="map" ref={mapElement} />
-         
         </div>
       )}
     </>
