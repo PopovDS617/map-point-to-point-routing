@@ -153,7 +153,7 @@ function App() {
       {map && (
         <div className="App">
         <div className="search-bar">
-            <h3>set your coordinates</h3>
+            <div className='title'>click on the map to add a marker</div>
             <input
               type="number"
               placeholder="longitude"
