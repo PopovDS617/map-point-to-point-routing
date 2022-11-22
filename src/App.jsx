@@ -155,7 +155,7 @@ function App() {
         <div className="search-bar">
             <div className='title'>click on the map to add a marker</div>
        <div className='input-container'>  
-       <p>or change the starting location</p>
+       <p>or change the starting point</p>
        <input
               type="number"
               placeholder="longitude"
