@@ -13,32 +13,11 @@ body {
 }
 
 .title {
+  font-family: monospace;
   text-align: center;
   margin-top: 1rem;
   margin-bottom: 1rem;
-  font-size: 2rem;
-}
-
-.input-container {
-  font-size: 1.5rem;
-  display: flex;
-
-  justify-content: center;
-  align-items: center;
-}
-
-.input-container input {
-  border-radius: 5px;
-  padding: 5px;
-  margin-left: 1rem;
-  font-size: 1.5rem;
-}
-
-.input-container button {
-  border-radius: 5px;
-  padding: 5px;
-  margin-left: 1rem;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
 }
 
 #map {
@@ -47,26 +26,16 @@ body {
   width: 100%;
 }
 
-.material-symbols-outlined {
-  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
-  background-color: green;
-}
-
 .marker {
-  background-image: url('../public/output-onlinepngtools\ \(2\).png');
+  background-image: url('../public/delivery-vector-free-icon-set-29.png');
   background-size: cover;
-  width: 26px;
-  height: 22px;
-  background-color: black;
-  border-radius: 11px;
-  border: solid 1px darkslategray;
+  width: 40px;
+  height: 40px;
 }
 
 .marker-delivery {
-  background-image: url('https://i.imgur.com/cIooqnp.png');
+  background-image: url('../public/delivery-vector-free-icon-set-22.png');
   background-size: cover;
-  width: 22px;
-  height: 22px;
-  border-radius: 15px;
-  border: solid darkslategrey 3px;
+  width: 50px;
+  height: 50px;
 }

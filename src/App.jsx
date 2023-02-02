@@ -10,8 +10,6 @@ function App() {
 
   const [longitude, setLongitude] = useState(39.72506498241886);
   const [latitude, setLatitude] = useState(47.22738590634815);
-  const longitudeInputRef = useRef(null);
-  const latitudeInputRef = useRef(null);
 
   const convertToPoints = (lngLat) => {
     return {
@@ -36,7 +34,7 @@ function App() {
       },
       paint: {
         'line-color': '#4a90e2',
-        'line-width': 4,
+        'line-width': 3,
       },
     });
   };
@@ -151,24 +149,12 @@ function App() {
     return () => map.remove();
   }, [longitude, latitude]);
 
-  const setCoordinates = (e) => {
-    e.preventDefault();
-
-    const latitude = parseInt(latitudeInputRef.current.value);
-    const longitude = parseInt(longitudeInputRef.current.value);
-
-    setLatitude(latitude);
-    setLongitude(longitude);
-  };
-
   return (
     <>
       {map && (
         <div className="App">
-          <div className="search-bar">
-            <div className="title">click on the map to add a marker</div>
-          
-          </div>
+          <div className="title">click on the map to add a marker</div>
+
           <div id="map" ref={mapElement} />
         </div>
       )}
