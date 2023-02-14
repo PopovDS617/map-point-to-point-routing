@@ -1,5 +1,11 @@
-### npm i
+## DEMO https://p-t-p-map-routing.vercel.app/
 
-### add your tomtom api key to .env
+## Getting Started
+#### `1. npm install`
+#### `2. npm run dev`
 
-### npm start
+<br>
+
+## TO DO:
+
+to be added later 
